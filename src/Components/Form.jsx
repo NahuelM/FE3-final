@@ -35,7 +35,7 @@ const Form = () => {
         <label htmlFor="email">Email:</label>
         <input type="text" id="email" name="email" onChange={updateEmail} />
         <button style={{backgroundColor:"green", marginTop: '10px'}} onClick={(e) => handleIngresar(e)}>Enviar</button>
-        <div>{show ? <> información  correcta</> :null}
+        <div>{show ? < h3 style ={{color:'green'}}> información  correcta</h3> :null}
           {error && <h3 style={{ color: 'red'}}>Por favor chequea que la información sea correcta</h3>}
         </div>
           

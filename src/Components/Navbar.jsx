@@ -12,12 +12,15 @@ const Navbar = () => {
   }
 
   return (
-    <nav style={{ background: mode ? 'black' : 'white', color: mode ? 'white' : 'black' }}>
-      <button onClick={() => {navigate('/home')}}>Home</button>
-      <button onClick={() => {navigate('/favs')}}>Favoritos</button>
-      <button onClick={() => {navigate('/contact')}}>Contacts</button>
-      <button onClick={() => {navigate('/details')}}>Details</button>
-      <button onClick={changeThemeClick}>Change theme</button>
+    <nav className={` ${mode ? 'dark' : ''}`}>
+      <img src = '/DH.ico'></img>
+      <ul>
+        <li><button  className={` ${mode ? 'dark' : ''}`} onClick={() => {navigate('/home')}}>Home</button></li>
+        <li><button  className={` ${mode ? 'dark' : ''}`} onClick={() => {navigate('/favs')}}>Favoritos</button> </li>
+        <li><button  className={` ${mode ? 'dark' : ''}`} onClick={() => {navigate('/contact')}}>Contacts</button></li>
+        <li><button  className={` ${mode ? 'dark' : ''}`} onClick={changeThemeClick}>Change theme</button></li>
+      </ul>
+     
     </nav>
   )
 }

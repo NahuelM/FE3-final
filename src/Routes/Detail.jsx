@@ -16,21 +16,27 @@ const Detail = () => {
     async function getDoctorData() {
       const resp = await fetch("https://jsonplaceholder.typicode.com/users/"+id);
       const data = await resp.json();
-      console.log(data)
       setData(data);
     }
     getDoctorData();
     }, []);
   return (
-    <div style={{ background: mode ? 'black' : 'white', color: mode ? 'white' : 'black' }} >
+    <div className={` ${mode ? 'dark' : ''}`} >
       <h1>Detail Dentist id </h1>
-      
-        <Link key={data.id} to={`${data.id}`} >
-            <li/>{data.name}
-            <li/>{data.email}
-            <li/>{data.phone}
-            <li/>{data.website}
-        </Link>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>website</th>
+        </tr>
+        <tr>
+          <td>{data.name}</td>
+          <td>{data.email}</td>
+          <td>{data.phone}</td>
+          <td>{data.website}</td>
+        </tr>
+      </table>
         
       {/* Deberan mostrar el name - email - phone - website por cada user en especifico */}
     </div>

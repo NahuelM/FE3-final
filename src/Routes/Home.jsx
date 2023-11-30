@@ -24,12 +24,10 @@ const Home = () => {
     }, []);
 
   return (
-    <main className="" style={{ background: mode ? 'black' : 'white', color: mode ? 'white' : 'black' }}>
+    <main className={` ${mode ? 'dark' : ''}`}>
       <h1>Home</h1>
       <div className='card-grid' >
-      <ul>
         {vetor.map(object => (<Card key = {object.id} name={object.name} username = {object.username} id = {object.id}/>  ))}
-      </ul>
       </div>
     </main>
   )
