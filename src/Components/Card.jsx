@@ -23,7 +23,7 @@ const Card = ({ name, username, id }) => {
       username: username
     };
     addUser(newUser);
-    alert("Doctor agregado a favoritos");
+    
   };
 
   return (

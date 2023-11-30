@@ -7,7 +7,13 @@ export const UserReducer = (state, action) => {
         case "ADD_DOC":
             const { id, name, username } = action.payload;
             const newDoc = {id, name, username}
-            
+            for(let i in state){
+                if(newDoc.id === state[i].id){
+                    alert("ya esta en favs")
+                    return state;
+                }
+            }
+            alert("Doctor agregado a favoritos");
             return [...state, newDoc];
         case "TOGGLE_STYLE":
             return !action.payload
