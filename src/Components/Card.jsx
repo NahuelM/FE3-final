@@ -33,7 +33,7 @@ const Card = ({ name, username, id }) => {
         <div>{name}</div>
         <div>{username}</div>
         <button onClick={addFav} className={`favButton ${mode ? 'dark' : ''}`}> <img src = '/favicon.ico' alt="favImage"></img>Add fav</button>
-        <hr/>
+        <br/>
         <button onClick={details} className={`favButton ${mode ? 'dark' : ''}`}>Info</button>
     </div>
   );

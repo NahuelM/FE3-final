@@ -21,7 +21,7 @@ const Detail = () => {
     getDoctorData();
     }, []);
   return (
-    <div className={` ${mode ? 'dark' : ''}`} style={{ transition: 'background-color 0.5s, color 0.5s' }}>
+    <div className={` ${mode ? 'dark' : ''}`} style={{ transition: 'background-color 0.5s, color 0.5s', marginTop:'5.2rem'}}>
       <h1>Detail Dentist id </h1>
       <table>
         <tr>

@@ -6,7 +6,7 @@ import { UserContext } from "../UserContextProvider";
 const Contact = () => {
   const {mode} = useContext(UserContext);
   return (
-    <div  className={` ${mode ? 'dark' : ''}`} style={{ transition: 'background-color 0.5s, color 0.5s' }}>
+    <div  className={` ${mode ? 'dark' : ''}`} style={{ transition: 'background-color 0.5s, color 0.5s', marginTop:'5.2rem'}}>
       <h2>Want to know more?</h2>
       <p>Send us your questions and we will contact you</p>
       <Form/>

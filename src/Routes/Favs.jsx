@@ -11,7 +11,7 @@ const Favs = () => {
   const { mode, users } = userContext;
   console.log(users)
   return (
-    <div style={{ background: mode ? 'black' : 'white', color: mode ? 'white' : 'black' }}>
+    <div className={` ${mode ? 'dark' : ''}`} style={{marginTop:'5.2rem'}}>
       <h1>Dentists Favs</h1>
       <div className="card-grid">
         <ul>

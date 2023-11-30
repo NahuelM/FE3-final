@@ -15,13 +15,13 @@ root.render(
       <UserContextProvider>
         <BrowserRouter>
           <Routes>
-            <Route path='/' element={<App/>} >
+            <Route path='/'  element={<App/>} >
               <Route path='home' element={<Home/>} />
               <Route path='details/:id' element={<Details/>} />
               <Route path='favs' element={<Favs/>} />
               <Route path='contact' element={<Contact/>} />
             </Route>
-            <Route path='*' element={<Home/>} />
+            <Route path='*' element={<App/>} />
           </Routes>
         </BrowserRouter>
       </UserContextProvider>
