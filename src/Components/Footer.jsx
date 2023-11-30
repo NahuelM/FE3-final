@@ -4,7 +4,7 @@ import { UserContext } from "../UserContextProvider";
 const Footer = () => {
   const {mode} = useContext(UserContext);
   return (
-    <footer className={` ${mode ? 'dark' : ''}`}>
+    <footer className={` ${mode ? 'dark' : ''}`} style={{ transition: 'background-color 0.5s, color 0.5s' }}>
         <p>Powered by</p>
         <img src="/images/DH.png" alt='DH-logo1' />
         <>

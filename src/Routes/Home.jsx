@@ -24,7 +24,7 @@ const Home = () => {
     }, []);
 
   return (
-    <main className={` ${mode ? 'dark' : ''}`}>
+    <main className={` ${mode ? 'dark' : ''}`} style={{ transition: 'background-color 0.5s, color 0.5s' }}>
       <h1>Home</h1>
       <div className='card-grid' >
         {vetor.map(object => (<Card key = {object.id} name={object.name} username = {object.username} id = {object.id}/>  ))}

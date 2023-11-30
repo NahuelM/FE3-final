@@ -12,8 +12,8 @@ const Navbar = () => {
   }
 
   return (
-    <nav className={` ${mode ? 'dark' : ''}`}>
-      <img src = '/DH.ico'></img>
+    <nav className={` ${mode ? 'dark' : ''}`}style={{ transition: 'background-color 0.5s, color 0.5s' }}>
+      <img src = '/DH.ico' alt = "DH ico"></img>
       <ul>
         <li><button  className={` ${mode ? 'dark' : ''}`} onClick={() => {navigate('/home')}}>Home</button></li>
         <li><button  className={` ${mode ? 'dark' : ''}`} onClick={() => {navigate('/favs')}}>Favoritos</button> </li>

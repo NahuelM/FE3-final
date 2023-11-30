@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useContext} from 'react'
-import {Link, useParams } from 'react-router-dom';
+import {useParams } from 'react-router-dom';
 import { UserContext } from "../UserContextProvider";
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
@@ -21,7 +21,7 @@ const Detail = () => {
     getDoctorData();
     }, []);
   return (
-    <div className={` ${mode ? 'dark' : ''}`} >
+    <div className={` ${mode ? 'dark' : ''}`} style={{ transition: 'background-color 0.5s, color 0.5s' }}>
       <h1>Detail Dentist id </h1>
       <table>
         <tr>
