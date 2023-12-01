@@ -12,19 +12,19 @@ import UserContextProvider from './UserContextProvider'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-      <UserContextProvider>
-        <BrowserRouter>
-          <Routes>
-            <Route path='/'  element={<App/>} >
-              <Route path='home' element={<Home/>} />
-              <Route path='details/:id' element={<Details/>} />
-              <Route path='favs' element={<Favs/>} />
-              <Route path='contact' element={<Contact/>} />
-            </Route>
-            <Route path='*' element={<App/>} />
-          </Routes>
-        </BrowserRouter>
-      </UserContextProvider>
+    <UserContextProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/'  element={<App/>} >
+            <Route path='home' element={<Home/>} />
+            <Route path='details/:id' element={<Details/>} />
+            <Route path='favs' element={<Favs/>} />
+            <Route path='contact' element={<Contact/>} />
+          </Route>
+          <Route path='*' element={<Home/>} />
+        </Routes>
+      </BrowserRouter>
+    </UserContextProvider>
   </React.StrictMode>
 );
 

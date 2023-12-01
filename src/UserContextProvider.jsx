@@ -9,8 +9,8 @@ export const UserReducer = (state, action) => {
             const newDoc = {id, name, username}
             for(let i in state){
                 if(newDoc.id === state[i].id){
-                    alert("ya esta en favs")
-                    return state;
+                    return state.filter((doc) => doc.id !== newDoc.id);;
+                    //return state;
                 }
             }
             alert("Doctor agregado a favoritos");
